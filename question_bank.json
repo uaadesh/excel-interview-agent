@@ -1,0 +1,83 @@
+{
+  "easy": [
+    {
+      "id": "E01",
+      "question_text": "Given a table with 'Quantity' in column C and 'Unit Price' in column D, what formula would you write in cell E2 to calculate the total price for that row?",
+      "correct_formula": "=C2*D2"
+    },
+    {
+      "id": "E02",
+      "question_text": "How would you calculate the sum of all values in column A from row 2 to row 50?",
+      "correct_formula": "=SUM(A2:A50)"
+    },
+    {
+      "id": "E03",
+      "question_text": "What is the formula to find the average of the numbers in cells B2 through B10?",
+      "correct_formula": "=AVERAGE(B2:B10)"
+    },
+    {
+      "id": "E04",
+      "question_text": "How do you count the number of cells in the range A1:A100 that contain numbers?",
+      "correct_formula": "=COUNT(A1:A100)"
+    },
+    {
+        "id": "E05",
+        "question_text": "You have a first name in cell A2 ('John') and a last name in cell B2 ('Doe'). How would you combine them in cell C2 to show 'John Doe'?",
+        "correct_formula": "=A2 & \" \" & B2"
+    }
+  ],
+  "medium": [
+    {
+      "id": "M01",
+      "question_text": "You have a list of sales regions in column A and their corresponding sales figures in column B. How would you find the total sales for the 'North' region?",
+      "correct_formula": "=SUMIF(A:A, \"North\", B:B)"
+    },
+    {
+      "id": "M02",
+      "question_text": "How would you pull an employee's email from a 'Directory' sheet into your current sheet using their Employee ID? The ID is in column A of both sheets, and the email is in column C of the directory.",
+      "correct_formula": "=VLOOKUP(A2, Directory!A:C, 3, FALSE)"
+    },
+    {
+      "id": "M03",
+      "question_text": "How would you count the number of sales in column C that are greater than $1000 AND occurred in the 'West' region (region listed in column A)?",
+      "correct_formula": "=COUNTIFS(A:A, \"West\", C:C, \">1000\")"
+    },
+    {
+      "id": "M04",
+      "question_text": "A cell A1 contains text with extra leading and trailing spaces like '  Product A  '. What function would you use to remove these extra spaces?",
+      "correct_formula": "=TRIM(A1)"
+    },
+    {
+      "id": "M05",
+      "question_text": "Your VLOOKUP formula sometimes returns an #N/A error. How can you modify the formula to show a blank cell (\"\") instead of the error?",
+      "correct_formula": "=IFERROR(VLOOKUP(A2, Directory!A:C, 3, FALSE), \"\")"
+    }
+  ],
+  "hard": [
+    {
+      "id": "H01",
+      "question_text": "An employee's full name is in cell A2 (e.g., 'John Doe'). How would you extract just their last name, assuming all names have a single space between them?",
+      "correct_formula": "=RIGHT(A2, LEN(A2) - FIND(\" \", A2))"
+    },
+    {
+      "id": "H02",
+      "question_text": "Explain the conceptual difference between `VLOOKUP` and the combination of `INDEX` and `MATCH`. Why is `INDEX/MATCH` often considered superior?",
+      "correct_formula": "INDEX/MATCH is more flexible as it doesn't require the lookup column to be the first column. It's also more efficient as it only processes the lookup and return columns, not the entire range in between. VLOOKUP's `col_index_num` is static, while MATCH's result is dynamic."
+    },
+    {
+      "id": "H03",
+      "question_text": "You have a table of sales data. How would you calculate the total revenue for 'Electronics' (Category in column A) sold in 'Q1' (Quarter in column B)? You cannot use SUMIFS.",
+      "correct_formula": "=SUMPRODUCT((A:A=\"Electronics\")*(B:B=\"Q1\"), C:C)"
+    },
+    {
+      "id": "H04",
+      "question_text": "Conceptually, what is a Pivot Table and in what scenario would you use one instead of formulas?",
+      "correct_formula": "A Pivot Table is an interactive tool used to summarize and analyze large datasets. You would use it instead of formulas when you need to quickly aggregate data, group it by different categories, and allow for dynamic exploration, like filtering and drilling down, without writing complex formulas."
+    },
+    {
+        "id": "H05",
+        "question_text": "What is the primary advantage of using XLOOKUP over VLOOKUP?",
+        "correct_formula": "The primary advantage of XLOOKUP is its flexibility. It can look up values in any column and return a value from any other column (to the left or right), unlike VLOOKUP which can only look in the leftmost column. It also defaults to an exact match, making it safer."
+    }
+  ]
+}
