@@ -45,7 +45,7 @@ Follow these steps to set up and run the project on your local machine.
 ```bash
 git clone https://github.com/uaadesh/excel-interview-agent.git
 cd excellytix-ai
-````
+```
 
 ### 3\. Set Up a Virtual Environment
 
