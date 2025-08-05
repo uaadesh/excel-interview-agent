@@ -84,7 +84,7 @@ def call_llm(messages: list) -> str:
 
     try:
         # Make the API request with a timeout for resilience.
-        response = requests.post(API_URL, headers=headers, json=payload, timeout=60)
+        response = requests.post(API_URL, headers=headers, json=payload, timeout=180)
         # Raise an exception for bad status codes (like 401, 404, 500).
         response.raise_for_status()
         result = response.json()
