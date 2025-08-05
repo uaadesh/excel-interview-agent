@@ -13,7 +13,7 @@ load_dotenv()
 
 # --- API Configuration ---
 # Using the standardized Chat Completions API endpoint for broad compatibility.
-API_URL = "[https://api-inference.huggingface.co/v1/chat/completions](https://api-inference.huggingface.co/v1/chat/completions)"
+API_URL = "https://router.huggingface.co/v1/chat/completions"
 # The specific model to be used for the interview evaluation.
 MODEL_ID = "zai-org/GLM-4.5:novita"
 # Securely retrieve the API token from environment variables.
